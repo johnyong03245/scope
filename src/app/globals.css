@@ -22,5 +22,22 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
+
+/* Fix for paragraph spacing in markdown content */
+.prose p {
+  margin-top: 1.25em !important;
+  margin-bottom: 1.25em !important;
+}
+
+.prose > * + * {
+  margin-top: 1em !important;
+}
+
+.prose ul, .prose ol {
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+}
+
+
