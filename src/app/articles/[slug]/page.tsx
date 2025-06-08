@@ -7,7 +7,6 @@ import Link from 'next/link';
 import ReactMarkdown from 'react-markdown';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { useRef } from 'react';
 
 export default function ArticlePage() {
   const params = useParams();
@@ -92,26 +91,26 @@ export default function ArticlePage() {
             <ReactMarkdown
               components={{
                 // Custom renderer for headings to ensure proper styling
-                h1: ({ node, ...props }) => {
+                h1: ({ ...props }) => {
                   return <h1 {...props} className="text-3xl font-bold mt-8 mb-4">{props.children}</h1>;
                 },
-                h2: ({ node, ...props }) => {
+                h2: ({ ...props }) => {
                   return <h2 {...props} className="text-2xl font-bold mt-8 mb-4">{props.children}</h2>;
                 },
-                h3: ({ node, ...props }) => {
+                h3: ({ ...props }) => {
                   return <h3 {...props} className="text-xl font-bold mt-6 mb-3">{props.children}</h3>;
                 },
-                h4: ({ node, ...props }) => {
+                h4: ({ ...props }) => {
                   return <h4 {...props} className="text-lg font-bold mt-5 mb-2">{props.children}</h4>;
                 },
-                h5: ({ node, ...props }) => {
+                h5: ({ ...props }) => {
                   return <h5 {...props} className="text-base font-bold mt-4 mb-2">{props.children}</h5>;
                 },
-                h6: ({ node, ...props }) => {
+                h6: ({ ...props }) => {
                   return <h6 {...props} className="text-sm font-bold mt-4 mb-2">{props.children}</h6>;
                 },
                 // Custom renderer for paragraphs to add citation numbers
-                p: ({ node, ...props }) => {
+                p: ({ ...props }) => {
                   const content = props.children;
                   // Check if the paragraph has a citation marker like [1] at the end
                   const citationMatch = String(content).match(/\[(\d+)\]$/); 
@@ -135,14 +134,14 @@ export default function ArticlePage() {
                   return <p {...props} className="whitespace-pre-line">{content}</p>;
                 },
                 // Add custom renderers for lists
-                ul: ({ node, ...props }) => {
+                ul: ({ ...props }) => {
                   return <ul {...props} className="list-disc pl-6 my-4 space-y-2">{props.children}</ul>;
                 },
-                li: ({ node, ...props }) => {
+                li: ({ ...props }) => {
                   return <li {...props} className="pl-2">{props.children}</li>;
                 },
                 // Add this new renderer for ordered/numbered lists
-                ol: ({ node, ...props }) => {
+                ol: ({ ...props }) => {
                   return <ol {...props} className="list-decimal pl-6 my-4 space-y-2">{props.children}</ol>;
                 }
               }}

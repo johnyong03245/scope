@@ -9,10 +9,10 @@ export default function AboutPage() {
           Hey there! Thanks for visiting scopé. This project is a passion of mine, a first step into the startup world, and an exploration of how AI can help us understand technology better.
         </p>
         <p className="text-gray-600 leading-relaxed font-normal">
-          I'm the person behind scopé, and while AI does the heavy lifting in writing the articles, I'm here to guide the content, select the topics, and ensure everything you read is both interesting and accurate. My focus is purely on technology – the areas I love to dig into and learn about myself.
+          I&apos;m the person behind scopé, and while AI does the heavy lifting in writing the articles, I&apos;m here to guide the content, select the topics, and ensure everything you read is both interesting and accurate. My focus is purely on technology – the areas I love to dig into and learn about myself.
         </p>
         <p className="text-gray-600 leading-relaxed font-normal">
-          Think of scopé as a collaborative effort: AI generates the ideas, and I shape them into something valuable for you. It's an exciting learning curve for me, and I'm thrilled to be building this platform to share my tech interests and gain real-world startup experience. Let's explore the world of tech together!
+          Think of scopé as a collaborative effort: AI generates the ideas, and I shape them into something valuable for you. It's an exciting learning curve for me, and I&apos;m thrilled to be building this platform to share my tech interests and gain real-world startup experience. Let's explore the world of tech together!
         </p>
       </div>
       <div className="mt-10">

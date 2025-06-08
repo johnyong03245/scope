@@ -22,8 +22,12 @@ export default function SupabaseAuth() {
 
       if (error) throw error;
       setMessage('Check your email for the confirmation link!');
-    } catch (error: any) {
-      setMessage(error.message);
+    } catch (error: unknown) { // Change 'any' to 'unknown'
+      if (error instanceof Error) { // Type guard to check if it's an Error instance
+        setMessage(error.message);
+      } else {
+        setMessage('An unexpected error occurred.'); // Fallback for non-Error objects
+      }
     } finally {
       setLoading(false);
     }
@@ -42,8 +46,12 @@ export default function SupabaseAuth() {
 
       if (error) throw error;
       setMessage('Signed in successfully!');
-    } catch (error: any) {
-      setMessage(error.message);
+    } catch (error: unknown) { // Change 'any' to 'unknown'
+      if (error instanceof Error) { // Type guard
+        setMessage(error.message);
+      } else {
+        setMessage('An unexpected error occurred.'); // Fallback
+      }
     } finally {
       setLoading(false);
     }
